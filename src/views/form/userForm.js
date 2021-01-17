@@ -21,6 +21,7 @@ const UserForm = ({ match }) => {
     const [registered, setRegistered] = useState('')
     const [type, setType] = useState('')
     const [saldo, setSaldo] = useState('')
+    const [alamat, setAlamat] = useState('')
 
     useEffect(() => {
         if (match.params.id) {
@@ -76,7 +77,7 @@ const UserForm = ({ match }) => {
                                     </CFormGroup>
                                 </CCol>
                             </CRow>
-                            <CButton block color="primary" className="d-flex ml-auto justify-content-center" style={{ width: 150 }} to="/transaksi">Tambah Transaksi</CButton>
+                            <CButton block color="primary" className="d-flex ml-auto justify-content-center" style={{ width: 150 }} to="/transaksi">{match.params.id ? 'Edit User' : 'Tambah User'}</CButton>
                         </CCardBody>
                     </CCard>
                 </CCol>
