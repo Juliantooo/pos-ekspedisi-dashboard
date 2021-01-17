@@ -49,8 +49,8 @@ const Transaksi = () => {
                         <CDataTable
                             items={DataTransaksi}
                             fields={[
-                                { key: 'name', _classes: 'font-weight-bold', label: 'name' },
-                                'tanggal', 'status', 'kurir', { key: 'berat', label: 'berat/kg' }, { key: 'bayar', label: 'ongkir' }
+                                { key: 'name', _classes: 'font-weight-bold', label: 'Nama' }, 'noHp',
+                                'tanggal', 'kurir', { key: 'berat', label: 'berat/kg' }, { key: 'bayar', label: 'ongkir' }, 'status', 'resi'
                             ]}
                             hover
                             striped
