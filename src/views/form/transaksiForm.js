@@ -11,7 +11,7 @@ import {
     CButton
 } from '@coreui/react'
 import { DocsLink } from 'src/reusable'
-import usersData from '../transaksi/dataTransaksi'
+import DataTransaksi from '../transaksi/dataTransaksi'
 
 const BasicForms = ({ match }) => {
     // const [collapsed, setCollapsed] = React.useState(true)
@@ -28,7 +28,7 @@ const BasicForms = ({ match }) => {
 
     useEffect(() => {
         if (match.params.id) {
-            const user = usersData.find(user => user.id.toString() === match.params.id)
+            const user = DataTransaksi.find(user => user.id.toString() === match.params.id)
             setid(user.id)
             setnama(user.name)
             settanggal(user.tanggal)
@@ -61,6 +61,14 @@ const BasicForms = ({ match }) => {
                             <CRow>
                                 <CCol xs="12">
                                     <CFormGroup>
+                                        <CLabel htmlFor="ccnumber">No Hp</CLabel>
+                                        <CInput id="noHp" placeholder="noHp" onChange={(val) => setnoHp(val)} defaultValue={noHp} required />
+                                    </CFormGroup>
+                                </CCol>
+                            </CRow>
+                            <CRow>
+                                <CCol xs="12">
+                                    <CFormGroup>
                                         <CLabel htmlFor="ccnumber">Kurir</CLabel>
                                         <CInput id="kurir" placeholder="Kurir" onChange={(val) => setkurir(val)} defaultValue={kurir} required />
                                     </CFormGroup>
@@ -74,7 +82,7 @@ const BasicForms = ({ match }) => {
                                     </CFormGroup>
                                 </CCol>
                             </CRow>
-                            <CButton block color="primary" className="d-flex ml-auto justify-content-center" style={{ width: 150 }} to="/transaksi">Tambah Transaksi</CButton>
+                            <CButton block color="primary" className="d-flex ml-auto justify-content-center" style={{ width: 150 }} to="/transaksi">{match.params.id ? 'Edit Transaksi' : 'Tambah Transaksi'}</CButton>
                         </CCardBody>
                     </CCard>
                 </CCol>
