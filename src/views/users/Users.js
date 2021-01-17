@@ -50,8 +50,8 @@ const Users = ({ match }) => {
             <CDataTable
               items={usersData}
               fields={[
-                { key: 'name', _classes: 'font-weight-bold' }, 'noHp',
-                'registered', 'type', 'status', 'saldo'
+                { key: 'name', _classes: 'font-weight-bold', label: 'Nama' }, 'noHp',
+                'registered', 'role', 'saldo'
               ]}
               hover
               striped
