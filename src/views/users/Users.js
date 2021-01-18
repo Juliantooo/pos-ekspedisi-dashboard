@@ -51,7 +51,7 @@ const Users = ({ match }) => {
               items={usersData}
               fields={[
                 { key: 'name', _classes: 'font-weight-bold', label: 'Nama' }, 'noHp',
-                'registered', 'role', 'saldo'
+                'registered', 'role', 'rank', 'saldo'
               ]}
               hover
               striped

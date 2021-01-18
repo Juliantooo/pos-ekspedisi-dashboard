@@ -15,7 +15,7 @@ const User = ({ match }) => {
       <CCol lg={12}>
         <CCard>
           <CCardHeader className="d-flex flex-row justify-content-between align-items-center">
-            Transaksi id : {match.params.id}
+            User id : {match.params.id}
             <CButton block color="primary" style={{ width: 150 }} onClick={() => history.push(`/users/${match.params.id}/edit`)} >Edit User</CButton>
           </CCardHeader>
           <CCardBody>
