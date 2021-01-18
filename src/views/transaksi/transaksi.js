@@ -41,8 +41,11 @@ const Transaksi = () => {
                 <CCard>
                     <CCardHeader>
                         <span className="d-flex flex-row justify-content-between align-items-center">
-                            Data Transaksi
-                            <CButton block color="primary" style={{ width: 150 }} to="/transaksi/tambah">Tambah Transaksi</CButton>
+                            <span className="font-weight-bold">Transaksi</span>
+                            <div className="d-flex flex-row w-100 align-items-end justify-content-end">
+                                <CButton block color="primary" className="w-100" style={{ maxWidth: 110, fontSize: 12 }} to="/transaksi/tambah">Transaksi Baru</CButton>
+                                <CButton block color="primary" variant="outline" className="w-100 ml-1" style={{ maxWidth: 100, fontSize: 12 }} to="/transaksi/tambah"> Cashback</CButton>
+                            </div>
                         </span>
                     </CCardHeader>
                     <CCardBody>
